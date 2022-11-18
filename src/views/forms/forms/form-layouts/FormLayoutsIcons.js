@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+
 // ** MUI Imports
 import Card from '@mui/material/Card'
 import Grid from '@mui/material/Grid'
@@ -18,8 +19,11 @@ import LoadingSpinner from 'src/views/utils/LoadingSpinner'
 
 const FormLayoutsIcons = ({ user, updateTable, closeModal }) => {
   const [error, setError] = useState()
+
   const emailInputRef = useRef()
+
   const { isLoading, sendRequest } = useHttp()
+
   const formSubmitHandler = async e => {
     e.preventDefault()
     setError(null)
@@ -49,11 +53,13 @@ const FormLayoutsIcons = ({ user, updateTable, closeModal }) => {
 
   const email = user.email
   const name = user.name
+
   const errorComponent = (
     <Box width='95%' maxWidth='400px' display='flex' justifyContent='center' margin='0 auto 1rem' textAlign='center'>
       <Alert severity='error'>{error}</Alert>
     </Box>
   )
+
   return (
     <Card>
       <CardHeader title={alertIcon} />

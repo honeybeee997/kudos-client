@@ -9,6 +9,7 @@ const EditEmployee = props => {
   const { open, handleClose, employeeData, updateTable } = props
   const [error, setError] = useState(null)
   const { isLoading, sendRequest } = useHttp()
+
   const updateEmployeeHandler = async data => {
     setError(null)
     const userId = employeeData.id
@@ -22,6 +23,7 @@ const EditEmployee = props => {
     updateTable()
     toast.success('Member updated successfully')
   }
+
   return (
     <Modal
       open={open}

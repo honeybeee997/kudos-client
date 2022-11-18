@@ -1,7 +1,9 @@
 import React from 'react'
 import { Modal } from '@mui/material'
 import FormLayoutsIcons from './../forms/forms/form-layouts/FormLayoutsIcons'
+
 import styles from './RemoveEmployee.module.css'
+
 const RemoveEmployee = props => {
   const { open, handleClose, user, updateTable } = props
 

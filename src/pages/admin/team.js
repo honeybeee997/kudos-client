@@ -51,6 +51,7 @@ const Index = ({ data }) => {
     </>
   )
 }
+
 export default Index
 
 // Snippet for SSR (fetching data before the page is rendered)
@@ -67,6 +68,7 @@ export async function getServerSideProps() {
   } catch (err) {
     data = 'Something went wrong'
   }
+
   return {
     props: {
       data

@@ -245,12 +245,15 @@ const FormLayoutsSeparator = ({ headingText, isEditMode, employeeData, onSubmit,
   )
 
   const formFields = isEditMode ? editModeFields : allFields
+
   const submitFromButtonText = isEditMode ? 'Save' : 'Add'
+
   const errorComponent = (
     <Box width='95%' maxWidth='400px' display='flex' justifyContent='center' margin='1rem auto 0' textAlign='center'>
       <Alert severity='error'>{error}</Alert>
     </Box>
   )
+
   return (
     <Card>
       <CardHeader title={headingText} />

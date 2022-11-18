@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 export const useHttp = () => {
   const [isLoading, setIsLoading] = useState(false)
 
@@ -13,9 +14,11 @@ export const useHttp = () => {
 
       const data = await response.json()
       setIsLoading(false)
+
       return data
     } catch (err) {
       setIsLoading(false)
+
       return err
     }
   }

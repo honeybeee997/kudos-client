@@ -23,6 +23,7 @@ const renderClient = params => {
   const { row } = params
   const stateNum = Math.floor(Math.random() * 6)
   const states = ['success', 'error', 'warning', 'info', 'primary', 'secondary']
+
   return <CustomAvatar src={row.avatarSrc || '/images/avatars/1.png'} sx={{ mr: 3, width: 34, height: 34 }} />
 }
 
@@ -98,6 +99,7 @@ const TableColumns = props => {
     kudos: '',
     phoneNumber: ''
   })
+
   const [userToBeRemoved, setUserToBeRemoved] = useState({
     email: '',
     name: ''
@@ -133,6 +135,7 @@ const TableColumns = props => {
       headerName: 'Name',
       renderCell: params => {
         const { row } = params
+
         return (
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             {renderClient(params)}
@@ -183,6 +186,7 @@ const TableColumns = props => {
       headerName: 'Kudos',
       renderCell: params => {
         const { row } = params
+
         return (
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             {iconsManager.kudos.icon}
